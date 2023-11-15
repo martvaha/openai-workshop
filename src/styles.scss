@@ -1,9 +1,15 @@
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   margin: 0;
-  padding: 30px;
 }
 
-html, body {
+app-auth {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+html,
+body {
   height: 100%;
 }

@@ -40,5 +40,8 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~5.2.2"
+  },
+  "prettier": {
+    "printWidth": 120
   }
 }
