@@ -1,1 +1,12 @@
 <app-auth></app-auth>
+
+<div class="messages">
+  <div *ngFor="let message of messageSubject | async">
+    {{ message.content }}
+  </div>
+</div>
+
+<div class="input">
+  <input #message />
+  <button type="submit" (click)="sendMessage(message)">Test</button>
+</div>
