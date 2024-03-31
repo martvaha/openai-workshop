@@ -1,6 +1,5 @@
-export type EmbeddingModel = "text-embedding-ada-002";
-// export type ChatModel = "gpt-4-1106-preview" | "gpt-3.5-turbo" | "gpt-3.5-turbo-16k";
-export type ChatModel = "gpt-4-0613" | "gpt-35-turbo-0613";
+export type EmbeddingModel = "text-embedding-3-small";
+export type ChatModel = "gpt-3.5-turbo" | "gpt-3.5-turbo-0301";
 export type MessageRole = "system" | "user" | "assistant" | "function";
 
 interface MessageBase {
@@ -47,6 +46,7 @@ export class FunctionDefinition {
 }
 
 export interface ChatCompletionRequest {
+  model: string;
   messages: Message[];
   temperature?: number;
   top_p?: number;
@@ -105,6 +105,28 @@ export interface ChatCompletionResponse {
   usage: {
     prompt_tokens: number;
     completion_tokens: number;
+    total_tokens: number;
+  };
+}
+
+export interface TextEmbeddingBody {
+  input: string;
+  model: EmbeddingModel;
+  dimensions: number;
+}
+
+export interface TextEmbeddingResponse {
+  object: "list";
+  data: [
+    {
+      object: "embedding";
+      embedding: number[];
+      index: number;
+    }
+  ];
+  model: EmbeddingModel;
+  usage: {
+    prompt_tokens: number;
     total_tokens: number;
   };
 }
