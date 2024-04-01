@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "angular.ng-template",
+        "sleistner.vscode-fileutils",
+        "esbenp.prettier-vscode",
+        "mikael.angular-beastcode"
+    ]
+}
