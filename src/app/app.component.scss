@@ -1,15 +1,5 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.messages {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.input {
-    height: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
