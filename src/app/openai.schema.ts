@@ -1,5 +1,5 @@
 export type EmbeddingModel = "text-embedding-3-small";
-export type ChatModel = "gpt-3.5-turbo" | "gpt-3.5-turbo-0301";
+export type ChatModel = "gpt-3.5-turbo" | "gpt-4-0125-preview";
 export type MessageRole = "system" | "user" | "assistant" | "function";
 
 interface MessageBase {

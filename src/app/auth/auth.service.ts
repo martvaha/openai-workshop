@@ -6,8 +6,8 @@ const OPEN_AI_AUTH_KEY_NAME = "openai-key";
 export class AuthService {
   constructor() {}
 
-  setAuthKey(value: string) {
-    localStorage.setItem(OPEN_AI_AUTH_KEY_NAME, value);
+  setAuthKey(value: string | undefined) {
+    localStorage.setItem(OPEN_AI_AUTH_KEY_NAME, value ?? "");
   }
 
   getAuthKey() {

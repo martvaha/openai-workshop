@@ -1,15 +1,1 @@
 <app-auth></app-auth>
-
-<div class="messages">
-  @for (message of messages(); track $index) {
-  <div>
-    <span>{{ $odd ? "B" : "K" }}: </span
-    >{{ message.content }}
-  </div>
-  }
-</div>
-
-<div class="input">
-  <input #message mat-input (keydown.enter)="sendMessage(message)" />
-  <button type="submit" (click)="sendMessage(message)">Saada</button>
-</div>
